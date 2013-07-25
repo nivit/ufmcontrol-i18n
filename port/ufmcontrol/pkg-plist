@@ -1,8 +1,11 @@
+@comment $FreeBSD: head/audio/ufmcontrol-i18n/pkg-plist 300895 2012-07-14 12:56:14Z beat $
+bin/tkradio
 bin/ufmcontrol
 include/libufm.h
+include/nls.h
 lib/libufm.a
-lib/libufm.so.1
 lib/libufm.so
+lib/libufm.so.1
 %%PORTDOCS%%%%DOCSDIR%%/LEGENDA
 %%PORTDOCS%%%%DOCSDIR%%/TRANSLATORS
 share/nls/af_ZA.ISO8859-1/ufmcontrol.cat
