@@ -1,0 +1,128 @@
+# This is a shell archive.  Save it in a file, remove anything before
+# this line, and then unpack it by entering "sh file".  Note, it may
+# create directories; files and directories will be owned by you and
+# have default permissions.
+#
+# This archive contains:
+#
+#	ufmcontrol-i18n
+#	ufmcontrol-i18n/Makefile
+#	ufmcontrol-i18n/pkg-descr
+#	ufmcontrol-i18n/pkg-plist
+#	ufmcontrol-i18n/distinfo
+#
+echo c - ufmcontrol-i18n
+mkdir -p ufmcontrol-i18n > /dev/null 2>&1
+echo x - ufmcontrol-i18n/Makefile
+sed 's/^X//' >ufmcontrol-i18n/Makefile << 'END-of-ufmcontrol-i18n/Makefile'
+X# New ports collection makefile for:	ufmcontrol
+X# Date created:				7 December 2002
+X# Whom:					nivit@users.sourceforge.net
+X#
+X# $FreeBSD$
+X
+XPORTNAME=		ufmcontrol-i18n
+XPORTVERSION=		0.2
+XCATEGORIES=		audio
+XMASTER_SITES=		${MASTER_SITE_SOURCEFORGE}
+XMASTER_SITE_SUBDIR=	${PORTNAME:C/-i18n$//1}
+X
+XMAINTAINER=		nivit@users.sourceforge.net
+XCOMMENT=		USB radio control utility
+X
+XINSTALLS_SHLIB=		yes
+X
+XMAN1=			ufmcontrol.1
+XMANLANG=		"" it.ISO8859-1
+X
+X.include <bsd.port.mk>
+END-of-ufmcontrol-i18n/Makefile
+echo x - ufmcontrol-i18n/pkg-descr
+sed 's/^X//' >ufmcontrol-i18n/pkg-descr << 'END-of-ufmcontrol-i18n/pkg-descr'
+XThe ufmcontrol utility is a program to control a radio
+Xattached to an USB port.
+XIt has the same user interface of cdcontrol(1).
+X
+XWWW: http://ufmcontrol.sourceforge.net/
+X
+X--
+XNicola Vitale
+Xnivit@users.sourceforge.net
+END-of-ufmcontrol-i18n/pkg-descr
+echo x - ufmcontrol-i18n/pkg-plist
+sed 's/^X//' >ufmcontrol-i18n/pkg-plist << 'END-of-ufmcontrol-i18n/pkg-plist'
+Xbin/ufmcontrol
+Xinclude/libufm.h
+Xlib/libufm.a
+Xlib/libufm_p.a
+Xlib/libufm.so.1
+Xlib/libufm.so
+X%%PORTDOCS%%%%DOCSDIR%%/LEGENDA
+X%%PORTDOCS%%%%DOCSDIR%%/TRANSLATORS
+Xshare/nls/af_ZA.ISO8859-1/ufmcontrol.cat
+Xshare/nls/af_ZA.ISO8859-15/ufmcontrol.cat
+Xshare/nls/bg_BG.CP1251/ufmcontrol.cat
+Xshare/nls/cs_CZ.ISO8859-2/ufmcontrol.cat
+Xshare/nls/da_DK.ISO8859-1/ufmcontrol.cat
+Xshare/nls/da_DK.ISO8859-15/ufmcontrol.cat
+Xshare/nls/de_AT.ISO8859-1/ufmcontrol.cat
+Xshare/nls/de_AT.ISO8859-15/ufmcontrol.cat
+Xshare/nls/de_CH.ISO8859-1/ufmcontrol.cat
+Xshare/nls/de_CH.ISO8859-15/ufmcontrol.cat
+Xshare/nls/de_DE.ISO8859-1/ufmcontrol.cat
+Xshare/nls/de_DE.ISO8859-15/ufmcontrol.cat
+Xshare/nls/el_GR.ISO8859-7/ufmcontrol.cat
+Xshare/nls/en_US.ISO8859-1/ufmcontrol.cat
+Xshare/nls/en_US.ISO8859-15/ufmcontrol.cat
+Xshare/nls/es_ES.ISO8859-1/ufmcontrol.cat
+Xshare/nls/es_ES.ISO8859-15/ufmcontrol.cat
+Xshare/nls/et_EE.ISO8859-15/ufmcontrol.cat
+Xshare/nls/fi_FI.ISO8859-1/ufmcontrol.cat
+Xshare/nls/fi_FI.ISO8859-15/ufmcontrol.cat
+Xshare/nls/fr_BE.ISO8859-1/ufmcontrol.cat
+Xshare/nls/fr_BE.ISO8859-15/ufmcontrol.cat
+Xshare/nls/fr_CA.ISO8859-1/ufmcontrol.cat
+Xshare/nls/fr_CA.ISO8859-15/ufmcontrol.cat
+Xshare/nls/fr_CH.ISO8859-1/ufmcontrol.cat
+Xshare/nls/fr_CH.ISO8859-15/ufmcontrol.cat
+Xshare/nls/fr_FR.ISO8859-1/ufmcontrol.cat
+Xshare/nls/fr_FR.ISO8859-15/ufmcontrol.cat
+Xshare/nls/hr_HR.ISO8859-2/ufmcontrol.cat
+Xshare/nls/hu_HU.ISO8859-2/ufmcontrol.cat
+Xshare/nls/is_IS.ISO8859-1/ufmcontrol.cat
+Xshare/nls/is_IS.ISO8859-15/ufmcontrol.cat
+Xshare/nls/it_CH.ISO8859-1/ufmcontrol.cat
+Xshare/nls/it_CH.ISO8859-15/ufmcontrol.cat
+Xshare/nls/it_IT.ISO8859-1/ufmcontrol.cat
+Xshare/nls/it_IT.ISO8859-15/ufmcontrol.cat
+Xshare/nls/lt_LT.ISO8859-4/ufmcontrol.cat
+Xshare/nls/nl_BE.ISO8859-1/ufmcontrol.cat
+Xshare/nls/nl_BE.ISO8859-15/ufmcontrol.cat
+Xshare/nls/nl_NL.ISO8859-1/ufmcontrol.cat
+Xshare/nls/nl_NL.ISO8859-15/ufmcontrol.cat
+Xshare/nls/no_NO.ISO8859-1/ufmcontrol.cat
+Xshare/nls/no_NO.ISO8859-15/ufmcontrol.cat
+Xshare/nls/pl_PL.ISO8859-2/ufmcontrol.cat
+Xshare/nls/pt_BR.ISO8859-1/ufmcontrol.cat
+Xshare/nls/pt_PT.ISO8859-1/ufmcontrol.cat
+Xshare/nls/pt_PT.ISO8859-15/ufmcontrol.cat
+Xshare/nls/ro_RO.ISO8859-2/ufmcontrol.cat
+Xshare/nls/ru_RU.CP1251/ufmcontrol.cat
+Xshare/nls/ru_RU.ISO8859-5/ufmcontrol.cat
+Xshare/nls/ru_RU.KOI8-R/ufmcontrol.cat
+Xshare/nls/sk_SK.ISO8859-2/ufmcontrol.cat
+Xshare/nls/sl_SI.ISO8859-2/ufmcontrol.cat
+Xshare/nls/sv_SE.ISO8859-1/ufmcontrol.cat
+Xshare/nls/sv_SE.ISO8859-15/ufmcontrol.cat
+Xshare/nls/tr_TR.ISO8859-9/ufmcontrol.cat
+Xshare/nls/uk_UA.ISO8859-5/ufmcontrol.cat
+X@dirrm man/it.ISO8859-1/man1
+X@dirrm man/it.ISO8859-1
+X%%PORTDOCS%%@dirrm %%DOCSDIR%%
+END-of-ufmcontrol-i18n/pkg-plist
+echo x - ufmcontrol-i18n/distinfo
+sed 's/^X//' >ufmcontrol-i18n/distinfo << 'END-of-ufmcontrol-i18n/distinfo'
+XMD5 (ufmcontrol-i18n-0.2.tar.gz) = 1ec8f6d955cba711790f58424b090af3
+END-of-ufmcontrol-i18n/distinfo
+exit
+

@@ -1,0 +1,311 @@
+.\" Copyright (c) 2002-2013 Nicola S. Vitale
+.\" All rights reserved.
+.\"
+.\" Redistribution and use in source and binary forms, with or without
+.\" modification, are permitted provided that the following conditions
+.\" are met:
+.\" 1. Redistributions of source code must retain the above copyright
+.\"    notice, this list of conditions and the following disclaimer.
+.\" 2. Redistributions in binary form must reproduce the above copyright
+.\"    notice, this list of conditions and the following disclaimer in the
+.\"    documentation and/or other materials provided with the distribution.
+.\"
+.\" THIS SOFTWARE IS PROVIDED BY THE AUTHOR AND CONTRIBUTORS ``AS IS'' AND
+.\" ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+.\" IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+.\" ARE DISCLAIMED.  IN NO EVENT SHALL THE AUTHOR OR CONTRIBUTORS BE LIABLE
+.\" FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+.\" DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS
+.\" OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+.\" HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+.\" LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
+.\" OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
+.\" SUCH DAMAGE.
+.\"
+.\" This manual page is derived from cdcontrol(1).
+.\"
+.\" $Id: ufmcontrol.1,v 1.9 2009/04/09 08:26:38 nivit Exp $
+.\"
+.Dd $Date: 2009/04/09 08:26:38 $
+.Dt UFMCONTROL 1
+.Os
+.Sh NAME
+.Nm ufmcontrol
+.Nd "USB FM radio control utility"
+.Sh SYNOPSIS
+.Nm
+.Op Fl hjsv
+.Op Fl f Ar dispositivo
+.Ar comando
+.Sh DESCRIPTION
+.Nm
+\(`e
+un programma per controllare
+una radio FM
+connessa ad una porta USB.
+L'argomento
+.Ar dispositivo
+\(`e un nome
+come
+.Pa ufm0
+oppure
+.Pa /dev/ufm1 .
+.Pp
+Se non viene
+fornito alcun
+comando,
+allora
+.Nm
+entra in
+modalit\(`a interattiva,
+leggendo i comandi
+dallo standard input.
+.Pp
+Il significato
+delle opzioni
+\(`e il seguente:
+.Bl -tag -width ".Fl f Ar dispositivo"
+.It Fl h
+Aiuto - stampa
+informazioni sull'uso
+del comando.
+.It Fl j
+Frequenze giapponesi
+- banda
+76 MHz ~ 91 MHz.
+.It Fl L
+Nessun locale
+- disabilita
+il supporto per
+l'internazionalizzazione.
+.It Fl s
+Nessun messaggio
+- non stampa
+alcuna informazione
+o commento.
+.It Fl v
+Modalit\(`a
+.Em verbose
+- stampa quante
+pi\(`u informazioni
+possibili.
+.It Fl V
+Versione
+- stampa il numero
+di versione
+del programma.
+.It Fl f Ar dispositivo
+Specifica
+un nome
+di dispositivo,
+come
+.Pa ufm0
+o
+.Pa /dev/ufm1 .
+Sono accettabili
+sia percorsi di
+file
+assoluti
+che relativi
+a
+.Pa /dev .
+.El
+.Pp
+I comandi disponibili
+sono elencati
+di s\('eguito.
+\(`E possibile digitare
+solo il numero minimo
+di caratteri
+necessario
+a identificare
+in modo univoco
+un dato comando.
+La parola
+.Cm sintonizza
+pu\(`o essere
+omessa.
+.Bl -tag -width Cm
+.It Cm +
+Incrementa
+la frequenza corrente
+di 10 kHz.
+.It Cm -
+Decrementa
+la frequenza corrente
+di 10 kHz.
+.It Cm dispositivo Op Ar filename
+Se viene fornito
+un argomento,
+allora il dispositivo
+corrente viene
+chiuso,
+.Ar filename
+aperto,
+e tutti
+i comandi
+successivi
+utilizzeranno
+tale dispositivo.
+Senza argomento,
+il comando
+stampa il nome
+del dispositivo
+in uso.
+.It Cm frequenza
+Ottiene
+la frequenza
+corrente.
+.It Cm aiuto
+Stampa
+un elenco
+di tutti
+i comandi
+disponibili.
+.It Cm giapponese Xo
+.Op Ar s\(`i | no
+.Xc
+Abilita/disabilita
+la banda delle frequenze
+utilizzate
+in Giappone.
+Senza
+alcun argomento
+il comando
+dice se
+si sta o meno
+usando tale banda.
+.It Cm locale Op Ar LOCALE
+Senza argomento
+stampa il nome
+della localizzazione
+corrente;
+altrimenti la
+imposta al valore
+.Ar LOCALE .
+.It Cm mixer Xo
+.Op Ar dispositivo Oo Ar canale Oc
+.Xc
+Senza argomenti
+stampa il nome
+dispositivo
+in uso;
+il primo argomento
+imposta il nome
+del mixer,
+mentre
+.Ar canale
+quello da usare.
+.It Cm canale Xo
+.Ar disposito_mixer
+.Xc
+L'argomento
+.Ar dispositivo_mixer
+specifica
+il canale
+al quale
+\(`e
+connessa la
+radio
+(mic oppure line).
+Senza argomenti
+stampa quello
+in uso.
+.It Cm suona
+Accende la radio.
+.It Cm esci
+Esce dal programma.
+.It Cm sintonizza Ar frequenza
+Imposta la frequenza
+specificata in MHz:
+ad esempio, 107,05.
+(notare la virgola
+dovuta alla
+localizzazione
+italiana).
+La banda di default
+\(`e da 88,00 MHz
+a 108,00 MHz;
+ma \(`e possibile
+passare a quella
+da 76,00 MHz
+a 91,00 MHz
+con il comando
+.Cm giapponese .
+.It Cm stereo
+Dice se la radio
+\(`e in modalit\(`a
+stereo o meno.
+Tale comando
+pu\(`o risultare
+utile per la
+sintonizzazione
+in automatico
+delle stazioni.
+.It Cm stop
+Spegne la radio.
+.It Cm prolisso  Xo
+.Op Ar s\(`i | no
+.Xc
+Abilita/disabilita
+la visualizzazione
+dei messaggi,
+cio\(`e vengono
+stampate quante
+pi\(`u informazioni
+possibili.
+Senza
+alcun argomento
+il comando
+dice se tale
+modalit\(`a
+\(`e attiva
+o meno.
+.It Cm volume Xo
+.Op Ar <l> Oo Ar <r> Oc | Ar mute
+.Xc
+Senza argomenti
+stampa
+i valori correnti
+del volume;
+altrimenti imposta
+i livelli dei canali
+del mixer
+ai valori forniti.
+.El
+.Sh ENVIRONMENT
+La
+seguente
+variabile d'ambiente
+influenza
+l'esecuzione di
+.Nm :
+.Pp
+.Bl -tag -width UFM_RADIO -compact
+.It Ev UFM_RADIO
+Il dispositivo
+da usare
+se non
+viene specificato
+con l'opzione
+.Fl f
+sulla riga
+di comando.
+.El
+.Sh FILES
+.Bl -tag -width ".Pa /dev/ufm0" -compact
+.It Pa /dev/ufm0
+.El
+.Sh AUTHORS
+Questo manuale
+\(`e stato
+scritto da
+.An Nicola Vitale Aq nivit@users.sourceforge.net
+ed \(`e derivato
+da quello
+di
+.Xr cdcontrol 1 .
+.Sh BUGS
+Il comando
+.Cm stereo
+non \(`e molto affidabile.

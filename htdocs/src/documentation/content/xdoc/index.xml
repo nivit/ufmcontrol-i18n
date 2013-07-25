@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE document PUBLIC "-//APACHE//DTD Documentation V1.1//EN" "document-v11.dtd">
+<document>
+  <header>
+    <title>Welcome to UFMControl Project</title>
+  </header>
+  <body>
+    <section>
+      <title>Select a language</title>
+<!--      <p>Please select your language:</p> -->
+      <ul>
+        <!-- see site.xml -->
+        <li><link href="site:english/index">English</link></li>
+	<li><link href="site:italian/index">Italiano</link></li>
+      </ul>
+    </section>
+  </body>
+</document>

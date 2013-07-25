@@ -1,0 +1,209 @@
+.\" Copyright (c) 2002-2013 Nicola S. Vitale
+.\" All rights reserved.
+.\"
+.\" Redistribution and use in source and binary forms, with or without
+.\" modification, are permitted provided that the following conditions
+.\" are met:
+.\" 1. Redistributions of source code must retain the above copyright
+.\"    notice, this list of conditions and the following disclaimer.
+.\" 2. Redistributions in binary form must reproduce the above copyright
+.\"    notice, this list of conditions and the following disclaimer in the
+.\"    documentation and/or other materials provided with the distribution.
+.\"
+.\" THIS SOFTWARE IS PROVIDED BY THE AUTHOR AND CONTRIBUTORS ``AS IS'' AND
+.\" ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+.\" IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+.\" ARE DISCLAIMED.  IN NO EVENT SHALL THE AUTHOR OR CONTRIBUTORS BE LIABLE
+.\" FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+.\" DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS
+.\" OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+.\" HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+.\" LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
+.\" OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
+.\" SUCH DAMAGE.
+.\"
+.\" This manual page is derived from cdcontrol(1).
+.\"
+.\" $Id: ufmcontrol.1,v 1.7 2009/04/09 08:26:39 nivit Exp $
+.\"
+.Dd $Date: 2009/04/09 08:26:39 $
+.Dt UFMCONTROL 1
+.Os
+.Sh NAME
+.Nm ufmcontrol
+.Nd "USB FM radio control utility"
+.Sh SYNOPSIS
+.Nm
+.Op Fl hjsv
+.Op Fl f Ar device
+.Ar command
+.Sh DESCRIPTION
+The
+.Nm
+utility is a program to control a FM radio attached
+to an USB port.
+The
+.Ar device
+is a name such
+as
+.Pa ufm0
+or
+.Pa /dev/ufm1 .
+.Pp
+If no command is given, then
+.Nm
+enters an interactive mode, reading commands from the standard input.
+.Pp
+The options are as follows:
+.Bl -tag -width ".Fl f Ar device"
+.It Fl h
+Help - print usage.
+.It Fl j
+Japanese band - set the valid band width to 76 MHz ~ 91 MHz.
+.It Fl L
+No Locale - disable I18N suppport.
+.It Fl s
+Silent mode - do not print any information or human readable comments.
+.It Fl v
+Verbose mode - print as much information as possible.
+.It Fl V
+Version - print version information of the program.
+.It Fl f Ar device
+Specify a device, such as
+.Pa ufm0
+or
+.Pa /dev/ufm1 .
+Both absolute path and relative to
+.Pa /dev
+filename are possible.
+.El
+.Pp
+The available commands are listed below.  Only as many
+characters as are required to uniquely identify a command
+need be specified.
+The word
+.Cm set
+can be omitted.
+.Bl -tag -width Cm
+.It Cm +
+Increment the current frequency by 10 kHz.
+.It Cm -
+Decrement the current frequency by 10 kHz.
+.It Cm device Op Ar filename
+If an argument is given, then the current
+device is closed,
+.Ar filename
+opened, and all
+successive commands
+are sent to it.
+Without argument print the current device.
+.It Cm get
+Get the current frequency.
+.It Cm help
+Print all the available commands.
+.It Cm japan Xo
+.Op Ar yes | no
+.Xc
+Enable/disable the japanese band.
+Without argument say if this is set.
+.It Cm locale Xo
+.Op Ar LOCALE
+.Xc
+If an argument is given,
+then the locale
+is set to
+.Ar LOCALE ;
+otherwise print
+the current one.
+.It Cm mixer Xo
+.Op Ar filename Oo Ar port Oc
+.Xc
+Set
+.Ar filename
+as default
+mixer device,
+using
+.Ar port
+as
+channel.
+.It Cm play
+Play the radio.
+.It Cm quit
+Quit the program.
+.It Cm port Xo
+.Op Ar channel
+.Xc
+The argument
+.Ar channel
+is the mixer
+channel,
+which the radio
+is attached to.
+Without argument
+print the current
+one.
+.It Cm set Ar frequency
+Set the frequency specified in MHz. E.g. 107.05.
+The default band is 88.00 MHz ~ 108.00 MHz;
+but you can change to 76.00 MHz ~ 91.00 MHz with
+the
+.Cm japan
+command.
+.It Cm stereo
+Say if the device is in stereo mode or not.
+This command may be useful to tune in the
+broadcasters.
+.It Cm stop
+Stop playing.
+.It Cm verbose Xo
+.Op Ar yes | no
+.Xc
+Enable/disable the verbose mode.
+Without argument say if the program is in verbose
+mode or not.
+.It Cm volume Xo
+.Op Ar <l> Oo Ar <r> Oc | Ar mute
+.Xc
+Set volume
+of the radio,
+using the port
+choosen with the
+.Cm mixer
+or
+.Cm port
+command
+(default: line).
+Without argument
+print
+the
+current
+values.
+.El
+.Sh ENVIRONMENT
+The
+following environment
+variable affects the
+execution of
+.Nm :
+.Pp
+.Bl -tag -width UFM_RADIO -compact
+.It Ev UFM_RADIO
+The device to use if one is not specified with the
+.Fl f
+flag.
+.El
+.Sh FILES
+.Bl -tag -width ".Pa /dev/ufm0" -compact
+.It Pa /dev/ufm0
+.El
+.Sh AUTHORS
+This
+manual page was written by
+.An Nicola Vitale Aq nivit@users.sourceforge.net
+and is derived
+from
+.Xr cdcontrol 1 .
+.Sh BUGS
+The
+.Cm stereo
+command is not very reliable.

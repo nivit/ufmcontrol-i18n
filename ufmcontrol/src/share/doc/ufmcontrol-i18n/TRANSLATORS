@@ -1,0 +1,25 @@
+#
+# First field sorted in alphabetical order
+#
+# locale(\t)+translator
+#
+# $Id: TRANSLATORS,v 1.1 2003/10/31 16:17:32 nivit Exp $
+#
+bg_BG.CP1251		Pavel Constantinov <nomadd@users.sourceforge.net>
+de_AT.ISO8859-1		Marco Piedra <mapiedra@users.sourceforge.net>
+de_CH.ISO8859-1		Marco Piedra <mapiedra@users.sourceforge.net>
+de_DE.ISO8859-1		Marco Piedra <mapiedra@users.sourceforge.net>
+es_ES.ISO8859-1		Marco Piedra <mapiedra@users.sourceforge.net>
+fr_BE.ISO8859-1		Christophe Dumez <hydr0g3n@users.sourceforge.net>
+fr_CA.ISO8859-1		Christophe Dumez <hydr0g3n@users.sourceforge.net>
+fr_CH.ISO8859-1		Christophe Dumez <hydr0g3n@users.sourceforge.net>
+fr_FR.ISO8859-1		Christophe Dumez <hydr0g3n@users.sourceforge.net>
+it_CH.ISO8859-1		Nicola S. Vitale <nivit@users.sourceforge.net>
+it_IT.ISO8859-1		Nicola S. Vitale <nivit@users.sourceforge.net>
+nl_BE.ISO8859-1		Carlo van Hest <carlovanhest@mail.com>
+nl_NL.ISO8859-1		Carlo van Hest <carlovanhest@mail.com>
+ro_RO.ISO8859-2		Tiberiu 'WooDy' Dragulinescu <tbmale@users.sourceforge.net>
+ru_RU.CP1251		Aleksey Malyshko <alee@anitex.by>
+ru_RU.ISO8859-5		Aleksey Malyshko <alee@anitex.by>
+ru_RU.KOI8-R		Aleksey Malyshko <alee@anitex.by>
+

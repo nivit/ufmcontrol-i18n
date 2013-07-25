@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+
+<!--
+Forrest site.xml
+
+This file contains an outline of the site's information content.  It is used to:
+- Generate the website menus (though these can be overridden - see docs)
+- Provide semantic, location-independent aliases for internal 'site:' URIs, eg
+<link href="site:changes"> links to changes.html (or ../changes.html if in
+  subdir).
+- Provide aliases for external URLs in the external-refs section.  Eg, <link
+  href="ext:cocoon"> links to http://xml.apache.org/cocoon/
+
+See http://xml.apache.org/forrest/linking.html for more info
+-->
+
+<site label="UFMControl" href="" xmlns="http://apache.org/forrest/linkmap/1.0">
+
+  <english label="English" href="en/">
+    <cvs label="CVS" href="cvs.html"/>
+    <devel label="How To Contribute" href="devel.html"/>
+    <download label="Download" href="download.html"/>
+    <index label="Index" href="index.html"/>
+    <ml label="Mailing List" href="ml.html"/>
+    <credits label="Credits" href="credits.html"/>
+  </english>
+
+  <italian label="Italian" href="it/">
+    <cvs label="CVS" href="cvs.html"/>
+    <devel label="Collaborare allo sviluppo" href="devel.html"/>
+    <download label="Download" href="download.html"/>
+    <index label="Indice" href="index.html"/>
+    <ml label="Mailing List" href="ml.html"/>
+    <credits label="Riconoscimenti" href="credits.html"/>
+  </italian>
+
+  <external-refs>
+
+    <ufmcontrol-site href="http://ufmcontrol.sourceforge.net/">
+	<port-0.1 href="ports/audio/ufmcontrol-0.1.shar"/>
+	<port-0.2 href="ports/audio/ufmcontrol-i18n-0.2.shar"/>
+	<port-0.2.1 href="ports/audio/ufmcontrol-i18n-0.2.1.shar"/>
+	<port-0.2.2 href="ports/audio/ufmcontrol-i18n-0.2.2.shar"/>
+    </ufmcontrol-site>
+
+    <xml.apache.org href="http://xml.apache.org/">
+	<forrest href="forrest/">
+    	<validation href="validation.html"/>
+    	<webapp href="your-project.html#webapp"/>
+      </forrest>
+      <cocoon href="cocoon/"/>
+    </xml.apache.org>
+
+    <freebsd-site href="http://www.FreeBSD.org/">
+    </freebsd-site>
+
+    <sf href="http://sourceforge.net/">
+	<project href="projects/ufmcontrol/"/>
+	<screenshots href="project/screenshots.php&#63;group_id=70783"/>
+	<docman href="docman/index.php&#63;group_id=70783"/>
+    </sf>
+
+    <cvs-sf href="http://ufmcontrol.cvs.sourceforge.net/">
+    	<viewcvs href="ufmcontrol/ufmcontrol"/>
+    </cvs-sf>
+
+    <dnld-sf href="http://prdownloads.sourceforge.net/ufmcontrol/">
+	<!-- source -->
+        <source-0.1 href="ufmcontrol-0.1.tar.gz&#63;download"/>
+        <source-0.2 href="ufmcontrol-i18n-0.2.tar.gz&#63;download"/>
+        <source-0.2.1 href="ufmcontrol-i18n-0.2.1.tar.gz&#63;download"/>
+	<source-0.2.2 href="ufmcontrol-i18n-0.2.2.tar.gz&#63;download"/>
+	<!-- package -->
+        <package-0.1 href="ufmcontrol-0.1.tgz&#63;download"/>
+        <package-0.2 href="ufmcontrol-i18n-0.2.tgz&#63;download"/>
+        <package-0.2.1 href="ufmcontrol-i18n-0.2.1.tgz&#63;download"/>
+        <package-0.2.2 href="ufmcontrol-i18n-0.2.2.tgz&#63;download"/>
+    </dnld-sf>
+
+  </external-refs>
+
+</site>

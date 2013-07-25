@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE document PUBLIC "-//APACHE//DTD Documentation V1.1//EN" "document-v11.dtd">
+<document>
+    <header>
+        <title>UFMControl - Download</title>
+
+        <authors>
+<person name="Nicola Vitale" email="nivit&amp;#64;users.sourceforge.net"/>
+        </authors>
+    </header>
+
+    <body>
+        <section>
+            <title>Download del programma</title>
+            <p>Versioni disponibili:</p>
+	    <!-- Release 0.2.2 -->
+	    <ul>
+                <li>
+		   ufmcontrol-i18n-0.2.2 (data rilascio: 22 Febbraio 2004)
+                    <ol>
+                        <li>
+			<link href="site:italian/cvs">sorgenti [via CVS]</link>
+                        </li>
+                        <li>
+			<link href="ext:source-0.2.2">sorgenti [pacchetto compresso]</link>
+                        </li>
+                        <li>
+			<link href="ext:package-0.2.2">binari</link>
+                        </li>
+                        <li>
+			<link href="ext:port-0.2.2">port</link>
+                        </li>
+                    </ol>
+                </li>
+            </ul>
+	    <!-- End release 0.2.2 -->
+	    <!-- Release 0.2.1 -->
+	    <ul>
+                <li>
+		   ufmcontrol-i18n-0.2.1 (data rilascio: 25 Ottobre 2003)
+                    <ol>
+                        <li>
+			<link href="site:italian/cvs">sorgenti [via CVS]</link>
+                        </li>
+                        <li>
+			<link href="ext:source-0.2.1">sorgenti [pacchetto compresso]</link>
+                        </li>
+                        <li>
+			<link href="ext:package-0.2.1">binari</link>
+                        </li>
+                        <li>
+			<link href="ext:port-0.2.1">port</link>
+                        </li>
+                    </ol>
+                </li>
+            </ul>
+	    <!-- End release 0.2.1 -->
+	    <ul>
+                <li>
+		   ufmcontrol-i18n-0.2 (data rilascio: 13 Settembre 2003)
+                    <ol>
+                        <li>
+			<link href="site:italian/cvs">sorgenti [via CVS]</link>
+                        </li>
+                        <li>
+			<link href="ext:source-0.2">sorgenti [pacchetto compresso]</link>
+                        </li>
+                        <li>
+			<link href="ext:package-0.2">binari</link>
+                        </li>
+                        <li>
+			<link href="ext:port-0.2">port</link>
+                        </li>
+                    </ol>
+                </li>
+            </ul>
+            <ul>
+                <li>
+		   ufmcontrol-0.1 (data rilascio: 7 Gennaio 2003)
+                    <ol>
+                        <li>
+			<link href="site:italian/cvs">sorgenti [via CVS]</link>
+                        </li>
+                        <li>
+			<link href="ext:dnld-sf/source-0.1">sorgenti [pacchetto compresso]</link>
+                        </li>
+                        <li>
+			<link href="ext:dnld-sf/package-0.1">binari</link>
+                        </li>
+                        <li>
+			<link href="ext:port-0.1">port</link>
+                        </li>
+                    </ol>
+                </li>
+            </ul>
+        </section>
+    </body>
+</document>

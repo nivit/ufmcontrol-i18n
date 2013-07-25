@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE document PUBLIC "-//APACHE//DTD Documentation V1.1//EN" "document-v11.dtd">
+<document>
+   <header>
+      <title>UFMControl - Sviluppo</title>
+
+      <authors>
+        <person name="Nicola Vitale" email="nivit&amp;#64;users.sourceforge.net" />
+       </authors>
+   </header>
+
+   <body>
+     <section>
+       <title>Collaborare allo sviluppo</title>
+       <p>Se desiderate partecipare allo sviluppo del programma, inviate un messaggio alla lista <link href="mailto:ufmcontrol-devel&amp;#64;lists.sourceforge.net">ufmcontrol-devel at lists.sourceforge.net</link> oppure a <link href="mailto:nivit&amp;#64;users.sourceforge.net">nivit at users.sourceforge.net</link></p>
+       <p>Grazie.</p>
+      </section>
+   </body>
+</document>
+

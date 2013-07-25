@@ -1,0 +1,85 @@
+<!-- $Id -->
+<!DOCTYPE article PUBLIC "-//FreeBSD//DTD DocBook V4.1-Based Extension//EN" [
+<!ENTITY % man PUBLIC "-//FreeBSD//ENTITIES DocBook Manual Page Entities//EN">
+]>
+<article lang="it">
+    <articleinfo>
+        <title>Come compilare e installare UFMControl</title>
+	<authorgroup>
+	    <author>
+                <firstname>Nicola S.</firstname>
+		<surname>Vitale</surname>
+		<affiliation>
+		    <address>
+                        <email>nivit&#64;users.sourceforge.net</email>
+                    </address>
+		</affiliation>
+             </author>
+         </authorgroup>
+         <copyright>
+            <year>2002</year>
+            <year>2003</year>
+            <holder>Nicola S. Vitale</holder>
+         </copyright>
+         <pubdate role="rcs">$Date: 2003/12/27 21:28:29 $</pubdate>
+         <abstract>
+             <para>Questo documento spiega come installare e configurare
+                 <application>ufmcontrol</application>.
+             </para>
+         </abstract>
+    </articleinfo>
+    <sect1 id="building-and-installing">
+        <title>Compilazione e installazione</title>
+        <para>
+            Se non si utilizza il meccanismo dei port (cfr. <xref linkend="port">),
+            si impartiscano i seguenti comandi come root (una volta scompattato
+	    il pacchetto dei sorgenti):
+         </para>
+         <screen>&prompt.root; <userinput>make && make install</userinput></screen>
+         <para>oppure (come utente normale):</para>
+         <screen>&prompt.user; <userinput>make && make install PREFIX=/dove/installare</userinput></screen>
+         <para>In quest'ultimo caso, &egrave; necessario anche impostare le seguenti
+	       variabili d'ambiente:</para>
+         <para>
+	     <programlisting>LD_LIBRARY_PATH=<replaceable>/dove/installare/lib</replaceable></programlisting>
+             <programlisting>NLSPATH=<replaceable>'/dove/installare/share/nls/%L/ufmcontrol.cat'</replaceable></programlisting>
+         </para>
+    </sect1>
+    <sect1 id="about-i18n-l10n-support">
+        <title>Localizzazione</title>
+        <para>Se si desidera digitare i comandi e visualizzare i messaggi
+	      del programma in lingua italiana, si imposti anche la variabile
+	      LANG (ed eventualmente TERM) al valore seguente:
+        </para>
+	<para>
+        <programlisting>LANG=<replaceable>it_IT.ISO8859-1</replaceable></programlisting>
+        <programlisting>(TERM=<replaceable>cons25l1)</replaceable></programlisting>
+        </para>
+        <para>Al momento, sono riconosciute le seguenti lingue:</para>
+        <itemizedlist>
+            <listitem><para>bulgaro</para></listitem>
+            <listitem><para>olandese</para></listitem>
+            <listitem><para>inglese (default)</para></listitem>
+            <listitem><para>francese</para></listitem>
+            <listitem><para>tedesco</para></listitem>
+            <listitem><para>italiano</para></listitem>
+            <listitem><para>spagnolo</para></listitem>
+            <listitem><para>romeno</para></listitem>
+            <listitem><para>russo</para></listitem>
+        </itemizedlist>
+    </sect1>
+    <sect1 id="port">
+        <title>Installazione mediante i port</title>
+        <para>Si prelevi innanzitutto il <ulink url="http://ufmcontrol.sourceforge.net/ports/audio/ufmcontrol.shar">file</ulink>
+	<application>shar</application>,
+    	e lo si copi nella directory <filename>/usr/ports/audio</filename>;
+	quindi si compili e installi <application>ufmcontrol</application>
+	con i seguenti comandi:</para>
+        <screen>&prompt.root; <userinput>sh ./ufmcontrol.shar</userinput></screen>
+        <screen>&prompt.root; <userinput>cd <filename>ufmcontrol-i18n</filename></userinput></screen>
+        <screen>&prompt.root; <userinput>make install clean</userinput></screen>
+	<note><para>Dal 5 Ottobre 2003, ufmcontrol fa parte del sistema dei Port di FreeBSD,
+	perci&ograve; la directory <filename>/usr/ports/audio/ufmcontrol-i18n</filename>
+	dovrebbe essere	gi&agrave; presente sul vostro sistema.</para></note>
+    </sect1>
+</article>

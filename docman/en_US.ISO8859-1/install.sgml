@@ -1,0 +1,82 @@
+<!-- $Id -->
+<!DOCTYPE article PUBLIC "-//FreeBSD//DTD DocBook V4.1-Based Extension//EN" [
+<!ENTITY % man PUBLIC "-//FreeBSD//ENTITIES DocBook Manual Page Entities//EN">
+]>
+<article lang="en">
+    <articleinfo>
+        <title>How to compile and install UFMControl</title>
+	<authorgroup>
+	    <author>
+                <firstname>Nicola S.</firstname>
+		<surname>Vitale</surname>
+		<affiliation>
+		    <address>
+                        <email>nivit&#64;users.sourceforge.net</email>
+                    </address>
+		</affiliation>
+             </author>
+         </authorgroup>
+         <copyright>
+            <year>2002</year>
+            <year>2003</year>
+            <holder>Nicola S. Vitale</holder>
+         </copyright>
+         <pubdate role="rcs">$Date: 2003/12/27 21:28:29 $</pubdate>
+         <abstract>
+             <para>This document explains how to install and configure
+                 <application>ufmcontrol</application>.
+             </para>
+         </abstract>
+    </articleinfo>
+    <sect1 id="building-and-installing">
+        <title>Building And Installing</title>
+        <para>
+            If you do not use the port (see <xref linkend="port">),
+            you can type the following as root:
+         </para>
+         <screen>&prompt.root; <userinput>make && make install</userinput></screen>
+         <para>or (as normal user):</para>
+         <screen>&prompt.user; <userinput>make && make install PREFIX=/where/to/install</userinput></screen>
+         <para>In the latter case, you must also set the variables:</para>
+         <para>
+	     <programlisting>LD_LIBRARY_PATH=<replaceable>/where/to/install/lib</replaceable></programlisting>
+             <programlisting>NLSPATH=<replaceable>'/where/to/install/share/nls/%L/ufmcontrol.cat'</replaceable></programlisting>
+         </para>
+    </sect1>
+    <sect1 id="about-i18n-l10n-support">
+        <title>About I18N/L10N Support</title>
+        <para>If you want to type commands and see messages in your
+              language, you must set the environment variable LANG
+              (and possibly TERM) to a suitable value, e.g. (for Russian):
+        </para>
+	<para>
+        <programlisting>LANG=<replaceable>ru_RU.KOI8-R</replaceable></programlisting>
+        <programlisting>TERM=<replaceable>cons25r</replaceable></programlisting>
+        </para>
+        <para>Currently, only the following languages are supported:</para>
+        <itemizedlist>
+            <listitem><para>Bulgarian</para></listitem>
+            <listitem><para>Dutch</para></listitem>
+            <listitem><para>English (default)</para></listitem>
+            <listitem><para>French</para></listitem>
+            <listitem><para>German</para></listitem>
+            <listitem><para>Italian</para></listitem>
+            <listitem><para>Spanish</para></listitem>
+            <listitem><para>Romanian</para></listitem>
+            <listitem><para>Russian</para></listitem>
+        </itemizedlist>
+    </sect1>
+    <sect1 id="port">
+        <title>Installing Via Port</title>
+        <para>First download the <application>shar</application> <ulink url="http://ufmcontrol.sourceforge.net/ports/audio/ufmcontrol.shar">file</ulink>,
+    	and copy it under <filename>/usr/ports/audio</filename>;
+	then build and install <application>ufmcontrol</application>
+	with these commands:</para>
+        <screen>&prompt.root; <userinput>sh ./ufmcontrol.shar</userinput></screen>
+        <screen>&prompt.root; <userinput>cd <filename>ufmcontrol-i18n</filename></userinput></screen>
+        <screen>&prompt.root; <userinput>make install clean</userinput></screen>
+	<note><para>Since 5 October 2003, ufmcontrol is part of the FreeBSD Ports Collection,
+	so the directory <filename>/usr/ports/audio/ufmcontrol-i18n</filename> should
+	already be present on your system.</para></note>
+    </sect1>
+</article>

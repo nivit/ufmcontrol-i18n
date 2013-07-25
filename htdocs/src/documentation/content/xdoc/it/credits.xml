@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE document PUBLIC "-//APACHE//DTD Documentation V1.1//EN" "document-v11.dtd">
+
+<document>
+<header>
+	<title>UFMControl - Riconoscimenti</title>
+	<authors>
+		<person name="Nicola Vitale" email="nivit&amp;#64;users.sourceforge.net"/>
+	</authors>
+</header>
+<body>
+<section>
+<title>Un grazie a...</title>
+<p>tutti coloro che hanno contribuito a questo progetto:</p>
+<dl>
+<dt>Pavel Constantinov <link href="mailto:pavelconstantinov&amp;#64;bigfoot.com">pavelconstantinov at bigfoot.com</link></dt>
+    <dd>Traduzione in bulgaro</dd>
+<dt>Christophe Dumez <link href="mailto:hydr0g3n&amp;#64;users.sourceforge.net">hydr0g3n at users.sourceforge.net</link></dt>
+    <dd>Traduzione in francese</dd>
+<dt>Carlo van Hest <link href="mailto:carlovanhest&amp;#64;mail.com">carlovanhest at mail.com</link></dt>
+    <dd>Traduzione in olandese</dd>
+<dt>Tiberiu 'WooDy' Dragulinescu <link href="mailto:tiberiu&amp;#64;email.com">tiberiu at email.com</link></dt>
+    <dd>Traduzione in romeno</dd>
+<dt>Aleksey Malyshko <link href="mailto:alee&amp;#64;anitex.by">alee at anitex.by</link></dt>
+    <dd>Traduzione in russo</dd>
+<dt>Marco Piedra <link href="mailto:mapiedra&amp;#64;users.sourceforge.net">mapiedra at users.sourceforge.net</link></dt>
+    <dd>Traduzione in spagnolo e tedesco</dd>
+</dl>
+</section>
+</body>
+</document>

@@ -1,0 +1,65 @@
+# This is a shell archive.  Save it in a file, remove anything before
+# this line, and then unpack it by entering "sh file".  Note, it may
+# create directories; files and directories will be owned by you and
+# have default permissions.
+#
+# This archive contains:
+#
+#	ufmcontrol
+#	ufmcontrol/Makefile
+#	ufmcontrol/pkg-descr
+#	ufmcontrol/pkg-plist
+#	ufmcontrol/distinfo
+#
+echo c - ufmcontrol
+mkdir -p ufmcontrol > /dev/null 2>&1
+echo x - ufmcontrol/Makefile
+sed 's/^X//' >ufmcontrol/Makefile << 'END-of-ufmcontrol/Makefile'
+X# New ports collection makefile for:	ufmcontrol
+X# Date created:				7 December 2002
+X# Whom:					nivit@users.sourceforge.net
+X#
+X# $FreeBSD$
+X
+XPORTNAME=		ufmcontrol
+XPORTVERSION=		0.1
+XCATEGORIES=		audio
+XMASTER_SITES=		${MASTER_SITE_SOURCEFORGE}
+XMASTER_SITE_SUBDIR=	${PORTNAME}
+X
+XMAINTAINER=		nivit@users.sourceforge.net
+XCOMMENT=		USB radio control utility
+X
+XINSTALLS_SHLIB=		yes
+X
+XMAN1=			ufmcontrol.1
+X
+X.include <bsd.port.mk>
+END-of-ufmcontrol/Makefile
+echo x - ufmcontrol/pkg-descr
+sed 's/^X//' >ufmcontrol/pkg-descr << 'END-of-ufmcontrol/pkg-descr'
+XThe ufmcontrol utility is a program to control an FM radio
+Xattached to an USB port.
+XIt has the same user interface of cdcontrol(1).
+X
+XWWW: http://ufmcontrol.sourceforge.net/
+X
+X--
+XNicola Vitale
+Xnivit@users.sourceforge.net
+END-of-ufmcontrol/pkg-descr
+echo x - ufmcontrol/pkg-plist
+sed 's/^X//' >ufmcontrol/pkg-plist << 'END-of-ufmcontrol/pkg-plist'
+Xbin/ufmcontrol
+Xinclude/libufm.h
+Xlib/libufm.a
+Xlib/libufm.so
+Xlib/libufm.so.1
+Xlib/libufm_p.a
+END-of-ufmcontrol/pkg-plist
+echo x - ufmcontrol/distinfo
+sed 's/^X//' >ufmcontrol/distinfo << 'END-of-ufmcontrol/distinfo'
+XMD5 (ufmcontrol-0.1.tar.gz) = 8d87d2f8023ac6011e89caccf7650d49
+END-of-ufmcontrol/distinfo
+exit
+

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE document PUBLIC "-//APACHE//DTD Documentation V1.1//EN" "document-v11.dtd">
+<document>
+    <header>
+        <title>UFMControl - Download</title>
+
+        <authors>
+<person name="Nicola Vitale" email="nivit&amp;#64;users.sourceforge.net"/>
+        </authors>
+    </header>
+
+    <body>
+        <section>
+            <title>UFMControl Download</title>
+            <p>Available releases:</p>
+	    <ul>
+                <li>
+		   ufmcontrol-i18n-0.2.2 (22 February 2004)
+                    <ol>
+                        <li>
+			<link href="site:english/cvs">sources [via CVS]</link>
+                        </li>
+                        <li>
+			<link href="ext:source-0.2.2">sources [package]</link>
+                        </li>
+                        <li>
+			<link href="ext:package-0.2.2">binary</link>
+                        </li>
+                        <li>
+			<link href="ext:port-0.2.2">port</link>
+                        </li>
+                    </ol>
+                </li>
+	    </ul>
+	    <ul>
+                <li>
+		   ufmcontrol-i18n-0.2.1 (25 October 2003)
+                    <ol>
+                        <li>
+			<link href="site:english/cvs">sources [via CVS]</link>
+                        </li>
+                        <li>
+			<link href="ext:source-0.2.1">sources [package]</link>
+                        </li>
+                        <li>
+			<link href="ext:package-0.2.1">binary</link>
+                        </li>
+                        <li>
+			<link href="ext:port-0.2.1">port</link>
+                        </li>
+                    </ol>
+                </li>
+	    </ul>
+	    <ul>
+                <li>
+		   ufmcontrol-i18n-0.2 (13 September 2003)
+                    <ol>
+                        <li>
+			<link href="site:english/cvs">sources [via CVS]</link>
+                        </li>
+                        <li>
+			<link href="ext:source-0.2">sources [package]</link>
+                        </li>
+                        <li>
+			<link href="ext:package-0.2">binary</link>
+                        </li>
+                        <li>
+			<link href="ext:port-0.2">port</link>
+                        </li>
+                    </ol>
+                </li>
+            </ul>
+            <ul>
+                <li>
+		   ufmcontrol-0.1 (7 January 2003)
+                    <ol>
+                        <li>
+			<link href="site:english/cvs">sources [via CVS]</link>
+                        </li>
+                        <li>
+			<link href="ext:source-0.1">sources [package]</link>
+                        </li>
+                        <li>
+			<link href="ext:package-0.1">binary</link>
+                        </li>
+                        <li>
+			<link href="ext:port-0.1">port</link>
+                        </li>
+                    </ol>
+                </li>
+            </ul>
+        </section>
+    </body>
+</document>

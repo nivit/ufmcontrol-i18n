@@ -1,0 +1,64 @@
+			  TABLE OF CONTENTS
+
+    1. What Is It?
+    2. Building And Installing
+    3. About I18N/L10N Support
+
+-------------------------------------------------------------------------------
+
+    1. What Is It?
+
+       Ufmcontrol is a program to control a radio attached to the USB port.
+
+-------------------------------------------------------------------------------
+
+    2. Building And Installing
+
+       If you do not use the port, you can type the following as root:
+
+       % make && make install
+
+       or (as normal user):
+
+       $ make && make install PREFIX=/where/to/install
+
+       In this case, you must also set the variables
+
+           LD_LIBRARY_PATH=/where/to/install/lib
+           NLSPATH='/where/to/install/share/nls/%L/ufmcontrol.cat'
+
+-------------------------------------------------------------------------------
+
+    3. About I18N/L10N Support
+
+       If you want to type commands and see messages in your
+       language, you must set the environment variable LANG
+       (and possibly TERM) to a suitable value, e.g. (for
+       Russian):
+       
+	   LANG=ru_RU.KOI8-R
+	   TERM=cons25r
+       
+       Currently, only these languages are supported:
+       
+    	   * Bulgarian
+	   * Dutch
+	   * French
+	   * German
+	   * Italian
+	   * Spanish
+	   * Romanian
+	   * Russian
+       
+
+
+
+
+
+
+
+
+
+
+$Id: LEGENDA,v 1.2 2004/01/03 09:17:28 nivit Exp $
+

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE book PUBLIC "-//APACHE//DTD Cocoon Documentation Book V1.0//EN" "book-cocoon-v10.dtd">
+
+<!-- Sample book.xml file.  If this file is renamed to 'book.xml', it will be
+used to define the menu in this subdirectory, instead of that generated from
+site.xml. -->
+
+<book software="UFMControl"
+  title="UFMControl"
+  copyright="@year@ Nicola Vitale, et alii"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
+
+  <menu label="English">
+    <menu-item label="Index" href="site:english/index"/>
+    <menu-item label="Screenshots" href="ext:sf/screenshots"/>
+    <menu-item label="Download" href="site:english/download"/>
+    <menu-item label="Documentation" href="ext:sf/docman"/>
+    <menu-item label="Info About Project" href="ext:sf/project"/>
+    <menu-item label="Mailing lists" href="site:english/ml"/>
+    <menu-item label="How To Contribute" href="site:english/devel"/>
+    <menu-item label="Credits" href="site:english/credits"/>
+  </menu>
+
+</book>
