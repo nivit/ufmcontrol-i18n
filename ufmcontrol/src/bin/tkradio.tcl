@@ -26,7 +26,7 @@
 #
 # $Id: tkradio.tcl,v 1.6 2009/04/09 08:26:35 nivit Exp $
 # \
-exec wish "$0" ${1+"$@"}
+exec wish "$0"
 
 wm protocol . WM_DELETE_WINDOW powerOff
 wm resizable . false false
