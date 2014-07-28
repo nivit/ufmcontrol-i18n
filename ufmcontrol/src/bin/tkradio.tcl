@@ -477,7 +477,7 @@ set frequencySlider [scale $displayFrame.frequencySlider \
         -sliderlength 40 \
         -tickinterval 5 \
         -to $bandHighLimit \
-        -variable curFreq \
+        -variable curFreq
         ]
 
 # buttonsFrame
