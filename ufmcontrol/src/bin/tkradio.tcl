@@ -472,7 +472,7 @@ set frequencySlider [scale $displayFrame.frequencySlider \
         -from $bandLowLimit \
         -label [::msgcat::mc {Frequency / MHz}] \
         -length 350 \
-        -resolution 0.05 \
+        -resolution 0.01 \
         -showvalue true \
         -sliderlength 40 \
         -tickinterval 5 \
