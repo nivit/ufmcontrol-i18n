@@ -75,7 +75,7 @@ array set stationList {}
 # debug: error=question=0, warning=1, info=2
 set debug 1
 set sysConfFile /usr/local/lib/ufmcontrol/share/xufmrc
-set confDir $env(HOME)/.tkradio
+set confDir $env(HOME)/.config/tkradio
 set usrConfFile $confDir/config
 
 #######################
