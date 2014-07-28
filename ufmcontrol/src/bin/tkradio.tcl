@@ -26,7 +26,7 @@
 #
 # $Id: tkradio.tcl,v 1.6 2009/04/09 08:26:35 nivit Exp $
 # \
-exec wish "$0" -- "$@"
+exec wish "$0" ${1+"$@"}
 
 wm protocol . WM_DELETE_WINDOW powerOff
 wm resizable . false false
@@ -397,7 +397,7 @@ proc decFreq {} {
     }
 }
 
-# Meter functions/data, written by Kåre Sjölander
+# Meter functions/data, written by KÃ¥re SjÃ¶lander
 # snack package - http://www.speech.kth.se/snack/
 array set meterMap {
     0 2
