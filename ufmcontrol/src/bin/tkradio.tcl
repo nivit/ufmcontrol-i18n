@@ -283,14 +283,14 @@ proc appInit {} {
     if {![info exists env(HOME)]} {
         set env(HOME) ~
     }
-    # create the directory $HOME/.tkradio
+    # create the directory $HOME/.config/tkradio
     if {![file isdirectory $confDir]} {
 	if {[file isfile $confDir]} {
 	    file rename -force $confDir "$confDir.old"
 	}
         file mkdir $confDir
     }
-    # create the directory $HOME/.tkradio/crontab
+    # create the directory $HOME/.config/tkradio/crontab
     set crontabDir [join [list $confDir crontab] /]
     if {![file isdirectory $crontabDir]} {
 	if {[file isfile $crontabDir]} {
