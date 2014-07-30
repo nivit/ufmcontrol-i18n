@@ -61,9 +61,13 @@ array set config {
     saveLastStation	{yes}
     saveVolLevel	{yes}
     station1 		{107.05}
-    station2		{100.20}
-    station3		{99.50}
-    station4		{99.80}
+    station2		{102.50}
+    station3		{101.45}
+    station4		{91.72}
+    station5		{99.25}
+    station6		{99.90}
+    station7		{102.30}
+    station8		{104.50}
     turnOffRadio	{yes}
 }
 
@@ -446,6 +450,7 @@ appInit
 # create widgets
 set displayFrame [frame .displayFrame  -relief ridge -borderwidth 3]
 set buttonsFrame [frame .buttonsFrame]
+set stationsFrame [frame .stationsFrame]
 set optionalFrame [frame .optionalFrame]
 
 # displayFrame.volumeSlider
@@ -513,7 +518,15 @@ set setPrefsButton [button $optionalFrame.setPrefsButton \
         -text [::msgcat::mc {Settings}] -relief raised \
         -command {setPrefs} \
         ]
-
+	
+# preset station buttons
+for {set s 1} {$s<9} {incr s} {
+	set stations($s) [button $stationsFrame.stationButton$s \
+		-text $s -relief raised \
+		-command "setFreq $config(station$s)" \
+	]
+}
+ 
 # meter canvas
 set meterCanvas [canvas $optionalFrame.meter -width 120 -height 100]
 
@@ -531,7 +544,6 @@ for {set i 0} {$i<17} {incr i} {
     $meterCanvas create line [expr {10*$i}] 0 [expr {10*$i}] 100 -width 5
 }
 
-# pack all widgets
 pack $decVolButton -fill x -padx 5 -pady 5 -side left -expand true
 pack $incVolButton -fill x -padx 5 -pady 5 -side left -expand true
 pack $decFreqButton -fill x -padx 5 -pady 5 -side left -expand true
@@ -541,8 +553,14 @@ pack $playButton -fill x -padx 5 -pady 5 -side left -expand true
 pack $stopButton -fill x -padx 5 -pady 5 -side left -expand true
 pack $powerButton -fill x -padx 5 -pady 5 -side left -expand true
 
+# preset stations
+for {set s 1} {$s<9} {incr s} {
+	pack $stations($s) -fill x -padx 5 -pady 5 -side left -expand true
+}
+
 pack $frequencySlider -expand true -fill x -fill y
 pack $volumeSlider -expand true -fill x -fill y
+pack $stationsFrame -side bottom -expand true -fil y -fill x
 pack $buttonsFrame -side bottom -expand true -fill y -fill x
 pack $displayFrame -side left -expand true -fill x -fill y
 pack $meterCanvas -side bottom -expand true -fill x -fill y
