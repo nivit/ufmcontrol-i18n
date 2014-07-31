@@ -1,0 +1,33 @@
+#
+# tkradio configuration file
+#
+
+cmdDecFreq = ufmcontrol -s -
+cmdGetFreq = ufmcontrol -L get
+cmdIncFreq = ufmcontrol -s +
+cmdPlayRadio = ufmcontrol -s -L play
+cmdSetFreq = ufmcontrol -s -L
+cmdSetJFreq = ufmcontrol -s -L -j
+cmdStereoMode = ufmcontrol -L stereo
+cmdStopRadio = ufmcontrol -s -L stop
+japaneseFreq = no
+lastStation = 94.60
+locale = en_EN.ISO8859-1
+meterBgColor = black
+meterFgColor = rgb:12/58/80
+mixerDevice = /dev/mixer0
+mixerInputJack = mic
+mixerRecLevel = 50
+mixerVolLevel = 15
+radioDevice = /dev/ufm0
+saveLastStation = yes
+saveVolLevel = yes
+station1 = 107.05
+station2 = 102.50
+station3 = 103.70
+station4 = 94.60
+station5 = 101.40
+station6 = 99.90
+station7 = 90.10
+station8 = 104.50
+turnOffRadio = no
