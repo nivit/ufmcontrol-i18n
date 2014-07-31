@@ -56,7 +56,7 @@ array set config {
     mixerDevice		{/dev/mixer0}
     mixerInputJack	{mic}
     mixerRecLevel	{75}
-    mixerVolLevel	{75}
+    mixerVolLevel	{25}
     radioDevice		{/dev/ufm0}
     saveLastStation	{yes}
     saveVolLevel	{yes}
@@ -78,7 +78,7 @@ variable bandLowLimit bandHighLimit
 array set stationList {}
 # debug: error=question=0, warning=1, info=2
 set debug 1
-set sysConfFile /usr/local/lib/ufmcontrol/share/xufmrc
+set sysConfFile /usr/local/share/ufmcontrol/xufmrc
 set confDir $env(HOME)/.config/tkradio
 set usrConfFile $confDir/config
 
