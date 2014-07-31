@@ -355,7 +355,7 @@ proc appInit {} {
         catch {getVolume} GotVol
     }
     setVolume $GotVol
-    # Set an source/initial value for mixer.rec mixer.mic/line
+    # Set a source/initial value for mixer.rec mixer.mic/line
     catch {exec mixer -f $config(mixerDevice) =rec $config(mixerInputJack)}
     catch {exec mixer -f $config(mixerDevice) rec $config(mixerRecLevel)}
     catch {exec mixer -f $config(mixerDevice) $config(mixerInputJack) $config(mixerVolLevel)}
