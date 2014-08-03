@@ -12,3 +12,12 @@ The program was tested with D-Link DRU-R100 USB Radio (DSB-R100).
 
 
 ![Tkradio screenshot](http://i.imgur.com/TisxLEa.png)
+
+# Installation
+
+`pkg install ufmcontrol-i18n`
+
+or
+
+`(cd /usr/ports/audio/ufmcontrol-i18n && make install clean)`
+
