@@ -2,11 +2,15 @@
 # $Id: Makefile,v 1.1 2003/10/31 16:17:32 nivit Exp $
 #
 
-.if !defined(PREFIX)
+FILES=		xufmrc
+FILESDIR=	${PREFIX}/share/ufmcontrol
+
+.if !defined(PREFIX) && !defined(PORTNAME)
 PREFIX=		/usr/local
 .endif
 
-FILES=		xufmrc
-FILESDIR=	${PREFIX}/share/ufmcontrol
+SHAREDIR=	${PREFIX}/share
+SHAREGRP!=	id -g -n
+SHAREOWN!=	id -u -n
 
 .include <bsd.prog.mk>
