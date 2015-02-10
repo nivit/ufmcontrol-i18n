@@ -3,7 +3,7 @@
 #
 
 FILES=		xufmrc
-FILESDIR=	${PREFIX}/share/ufmcontrol-i18n
+FILESDIR=	${PREFIX}/share/ufmcontrol-i18n/
 
 .if !defined(PREFIX) && !defined(PORTNAME)
 PREFIX=		/usr/local
