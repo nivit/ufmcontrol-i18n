@@ -22,9 +22,7 @@ SCRIPTS=	tkradio.tcl
 
 CFLAGS+=	-I${.CURDIR}/../include ${BDECFLAGS} -Werror
 
-DPADD=		${LIBEDIT} ${LIBTERMCAP}
-
-LDADD=		-ledit -ltermcap -lufm -L${.CURDIR}/../lib/obj
+LDADD+=		${LIBS} -ledit -ltermcap -lufm -L${.CURDIR}/../lib/obj
 
 NO_MAN=		YES
 
